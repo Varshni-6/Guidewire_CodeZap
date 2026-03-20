@@ -1,7 +1,7 @@
 # Vigilant
 ### Adversarial Fraud Defense for Last-Mile Delivery Platforms
 
-> Built by **CodeZap** for the Market Crash Hackathon Challenge
+> Built by **CodeZap**
 
 ---
 
@@ -186,6 +186,28 @@ flowchart LR
 
 A wired charging fallback exists but while the tracker charges via cable, the partner cannot accept new orders. If the tracker goes offline for any reason, the partner is locked out entirely. An honest worker is temporarily inconvenienced. A fraudster who disables the tracker loses their ability to work completely and cannot resolve it legitimately.
 
+#### Hardware Design — Cross-Sectional View
+
+```mermaid
+block-beta
+    columns 1
+    F["Food compartment\nInsulated interior — food placement zone"]
+    C1["· · · · · · · · · · · · Cushion layer · · · · · · · · · · · ·"]
+    W["//////////  1 kg counterweight layer  //////////\nDense mass — stabilises piezo vibration capture"]
+    C2["· · · · · · · · · · · · Cushion layer · · · · · · · · · · · ·"]
+    P["            Piezoelectric crystal layer      \nVibration to electricity"]
+    T["GPS module          Battery reserve\nTracking layer — self-powered"]
+    C3["· · · · · · · · · · · · Cushion layer · · · · · · · · · · · ·"]
+    S["Bag shell — rigid outer frame"]
+    F --> C1
+    C1 --> W
+    W --> C2
+    C2 --> P
+    P --> T
+    T --> C3
+    C3 --> S
+```
+
 ---
 
 ### 4. Financial Circuit Breakers
@@ -270,8 +292,6 @@ The hardware tracker is manufactured and leased to delivery platforms on a per-c
 
 The software verification layer — dual GPS corroboration, physics-based delivery validation, and network-level ring detection — is packaged as a standalone API that any gig economy platform can license. Food delivery today. Ride sharing tomorrow. Any platform that moves goods or people using independent contractors faces this exact problem.
 
-Platforms that adopt Vigilant can be independently certified as fraud-resistant. That certification becomes a signal to investors, insurance providers, and enterprise clients who cannot afford liquidity exposure from coordinated fraud rings.
-
 ---
 
 ## Business Model
@@ -297,7 +317,6 @@ Platforms that adopt Vigilant can be independently certified as fraud-resistant.
 ## Team
 
 **CodeZap**
-Market Crash Hackathon — 2025
 
 ---
 
